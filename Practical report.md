@@ -12,7 +12,7 @@ int main()
  return 0;
 }
 ```
-* Output *
-``C
+## Output of the program 
+```C
 Hello World
-``
+```
