@@ -667,3 +667,102 @@ Enter a number to search: 8
   Enter the Number: 8
   8 is not a Prime Number
 ```
+# 21. Program of Linear search for One Dimensional array
+```C
+#include<stdio.h>
+int main()
+
+{
+int array[12]={1,5,9,7,3,82,46,23,23,5,10,3};
+int size=12,flag=0,item,a;
+
+printf("\nEnter the Value: ");
+scanf("%d", &a);
+
+for(int i=0;i<size;i++)
+  {
+    if(a==array[i])
+      {
+            flag=a;
+            break;
+      }
+  }
+  
+    if(flag==a)
+    printf("\nSearch is Sucessfull \n%d Element is present in the array\n",a);
+    else
+    printf("\nSearch is Unsucessfull \n%d Element is not present in the array\n",a);
+    
+    return 0;
+}
+```
+**Output of the program**
+```
+First Case
+
+Enter the Value to be searched: 5
+
+Search is Sucessfull 5 Element is present in the array
+Second Case
+
+Enter the Value to be searched: 2
+
+Search is Unsucessfull 2 Element
+```
+# 22. Program of Multiplication of 2x2 Matrix
+```C
+#include<stdio.h>
+int main()
+{
+float a,b,c,d,e,f,g,h,i,j,k,l;
+
+printf("\nSample of Ist matrix: | a=1      b=2 |\n                      | c=3      d=4 |\n\n\
+Sample of 2nd matrix: | e=5      f=6 |\n                      | f=7      h=8 |\n\n");
+
+     printf("Enter The Valve of a: ");
+     scanf("%f",&a);
+     printf("Enter The Valve of b: ");
+     scanf("%f",&b);
+     printf("Enter The Valve of c: ");
+     scanf("%f",&c);
+     printf("Enter The Valve of d: ");
+     scanf("%f",&d);
+     printf("Enter The Valve of e: ");
+     scanf("%f",&e);
+     printf("Enter The Valve of f: ");
+     scanf("%f",&f);
+     printf("Enter The Valve of g: ");
+     scanf("%f",&g);
+     printf("Enter The Valve of h: ");
+     scanf("%f",&h); 
+
+     i=(a*e)+(b*g);
+     j=(a*f)+(b*h);
+     k=(c*e)+(d*g);
+     l=(c*f)+(d*h);
+
+     printf("\nMultiplication of A,B is: | %.2f     %.2f |\n                          | %.2f     %.2f |",i,j,k,l);
+
+     return 0;
+}
+```
+**Output of the program**
+```
+Sample of Ist matrix: | a=1      b=2 |
+                      | c=3      d=4 |
+
+Sample of 2nd matrix: | e=5      f=6 |
+                      | f=7      h=8 |
+
+Enter The Valve of a: 7
+Enter The Valve of b: 5
+Enter The Valve of c: 4
+Enter The Valve of d: 0
+Enter The Valve of e: 3
+Enter The Valve of f: 5
+Enter The Valve of g: 9
+Enter The Valve of h: 1
+
+Multiplication of A,B is: | 66.00     40.00 |
+                          | 12.00     20.00 |
+```
