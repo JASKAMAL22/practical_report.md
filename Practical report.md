@@ -3,6 +3,7 @@
 ## ROLL NO-*1915037*
 ## BRANCH-*COMPUTER SCIENCE*
 ## SECTION-**CS(A2)**
+## Submitted to : **Prof Hardeep Singh**
 
 # 1.Program to print Hello World
 ```C
@@ -835,4 +836,4 @@ Before swaping 8 5
 After swapping : 5 8
 ```
 ****************************************************************************************************************************
-                                                      ###ThankYou###
+                                                      ###ThankYou
