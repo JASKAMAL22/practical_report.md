@@ -766,3 +766,73 @@ Enter The Valve of h: 1
 Multiplication of A,B is: | 66.00     40.00 |
                           | 12.00     20.00 |
 ```
+# 23. Program to find largest of four numbers using function.
+```C
+#include <stdio.h>
+int larg(int a,int b, int c,int d);
+int main()
+{
+ int x,y,z,r;
+ printf("Enter the numbers : ");
+ scanf("%d %d %d %d",&x,&y,&z,&r);
+ larg(x,y,z,r);
+ return 0;
+}
+ 
+int larg(int a,int b,int c,int d)
+{
+ if((a>b)&&(a>c)&&(a>d))
+ {
+  printf("%d is largest\n",a);
+ }
+else if((b>a)&&(b>c)&&(b>d))
+ {
+  printf("%d is largest\n",b);
+ }
+else if((c>a)&&(c>b)&&(c>d))
+ {
+  printf("%d is largest\n",c);
+ }
+ else
+ {
+ printf("%d is largest\n",d);
+ }
+return 0;
+}
+```
+**Output of the program**
+```C
+Enter the numbers : 4 2 6 8
+8 is largest
+```
+# 24. Program to swap using call by reference.
+```C
+#include <stdio.h>
+int swap(int ,int );
+int main()
+{
+ int a,b;
+ printf("Enter the two numbers : ");
+ scanf("%d %d",&a,&b);
+ printf("Before swaping %d %d\n",a,b);
+ swap(a,b);
+ return 0;
+}
+ 
+int swap(int a,int b)
+{
+ int *x,*y;
+ x=&a;
+ y=&b;
+ printf("After swapping : %d %d\n",*y,*x);
+ return 0;
+}
+```
+**Output of the program**
+```C
+Enter the two numbers : 8 5
+Before swaping 8 5
+After swapping : 5 8
+```
+****************************************************************************************************************************
+                                                      ###ThankYou###
