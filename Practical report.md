@@ -4,7 +4,7 @@
 ## BRANCH-*COMPUTER SCIENCE*
 ## SECTION-**CS(A2)**
 ## Submitted to : **Prof Hardeep Singh**
-![GNDEC](https://images.app.goo.gl/pq5T7ybQo7HtQdEJ6 "nanak")
+![gndec](https://gndec.ac.in/~icraect2016/images/logo.jpg)
 
 # 1.Program to print Hello World
 ```C
