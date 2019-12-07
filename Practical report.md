@@ -332,7 +332,7 @@ Enter The Third Value: 18
 
 Average is: 32.33
 ```
-# 12. Program to find FizzBuzz od a Integer
+# 11. Program to find FizzBuzz of an Integer
 ```C
 #include<stdio.h>
 int main()
@@ -357,7 +357,7 @@ int main()
 Enter the Interger: 171
 Fizz
 ```
-# 13. Program of print a Calculator using puts function
+# 12. Program of print a Calculator using puts function
 ```C
 #include<stdio.h>
 void main()
@@ -386,7 +386,7 @@ void main()
 |     0     | * |
 |___________|___|
 ```
-# 14. Program to print a Face using puts function
+# 13. Program to print a Face using puts function
 ```C
 #include<stdio.h>
 void main()
@@ -414,7 +414,7 @@ void main()
 |       |      |
 |_______|______|
 ```
-# 15. Program of Multiplication of 2x2 Matrix
+# 14. Program of Multiplication of 2x2 Matrix
 ```C
 #include<stdio.h>
 int main()
@@ -470,6 +470,137 @@ Enter The Valve of h: 1
 
 Multiplication of A,B is: | 66.00     40.00 |
                           | 12.00     20.00 |
+```
+# 15. Program to add two matrices
+```C
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int mat1[3][3], mat2[3][3], i, j, mat3[3][3];
+    printf("Enter 3*3 matrix 1 elements :");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+            scanf("%d",&mat1[i][j]);
+    }
+    printf("Enter 3*3 matrix 2 elements :");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+            scanf("%d",&mat2[i][j]);
+    }
+    printf("\nAdding the two matrix.....");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+            mat3[i][j]=mat1[i][j]+mat2[i][j];
+    }
+    printf("\nHere is the addition of matrix:\n");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+         printf("%d ",mat3[i][j]);
+          printf("\n");
+    }
+    return 0;
+}
+```
+**Output**
+```
+Enter 3*3 matrix 1 elements :1
+2
+3
+4
+5
+6
+7
+8
+9
+Enter 3*3 matrix 2 elements :9
+8
+7
+6
+5
+4
+3
+2
+1
+Adding the two matrix.....
+Here is the addition of matrix:
+10 10 10
+10 10 10
+10 10 10
+```
+# 16. Program of Transpose of matrix
+```C
+#include<stdio.h>
+int main()
+{
+    int a[10][10], transpose[10][10], r, c, i, j;
+    printf("Enter rows and columns of matrix: ");
+    scanf("%d %d", &r, &c);
+    // Storing elements of the matrix
+    printf("\nEnter elements of matrix:\n");
+    for(i=0; i<r; ++i)
+        for(j=0; j<c; ++j)
+        {
+            printf("Enter element a%d%d: ",i+1, j+1);
+            scanf("%d", &a[i][j]);
+        }
+    // Displaying the matrix a[][] */
+    printf("\nEntered Matrix: \n");
+    for(i=0; i<r; ++i)
+        for(j=0; j<c; ++j)
+        {
+            printf("%d  ", a[i][j]);
+            if (j == c-1)
+                printf("\n\n");
+        }
+    // Finding the transpose of matrix a
+    for(i=0; i<r; ++i)
+        for(j=0; j<c; ++j)
+        {
+            transpose[j][i] = a[i][j];
+        }
+    // Displaying the transpose of matrix a
+    printf("\nTranspose of Matrix:\n");
+    for(i=0; i<c; ++i)
+        for(j=0; j<r; ++j)
+        {
+            printf("%d  ",transpose[i][j]);
+            if(j==r-1)
+                printf("\n\n");
+        }
+    return 0;
+}
+```
+**Output**
+```
+Enter rows and columns of matrix: 2
+3
+
+Enter element of matrix:
+Enter element a11: 2
+Enter element a12: 3
+Enter element a13: 4
+Enter element a21: 5
+Enter element a22: 6
+Enter element a23: 4
+
+Entered Matrix: 
+2  3  4  
+
+5  6  4  
+
+
+Transpose of Matrix:
+2  5  
+
+3  6  
+
+4  4
+
 ```
 # 17. Program of FizzBuzz in a continues loop
 ```C
@@ -669,48 +800,6 @@ Enter a number to search: 8
   Enter the Number: 8
   8 is not a Prime Number
 ```
-# 21. Program of Linear search for One Dimensional array
-```C
-#include<stdio.h>
-int main()
-
-{
-int array[12]={1,5,9,7,3,82,46,23,23,5,10,3};
-int size=12,flag=0,item,a;
-
-printf("\nEnter the Value: ");
-scanf("%d", &a);
-
-for(int i=0;i<size;i++)
-  {
-    if(a==array[i])
-      {
-            flag=a;
-            break;
-      }
-  }
-  
-    if(flag==a)
-    printf("\nSearch is Sucessfull \n%d Element is present in the array\n",a);
-    else
-    printf("\nSearch is Unsucessfull \n%d Element is not present in the array\n",a);
-    
-    return 0;
-}
-```
-**Output of the program**
-```
-First Case
-
-Enter the Value to be searched: 5
-
-Search is Sucessfull 5 Element is present in the array
-Second Case
-
-Enter the Value to be searched: 2
-
-Search is Unsucessfull 2 Element
-```
 # 22. Program of Multiplication of 2x2 Matrix
 ```C
 #include<stdio.h>
@@ -836,5 +925,42 @@ Enter the two numbers : 8 5
 Before swaping 8 5
 After swapping : 5 8
 ```
-****************************************************************************************************************************
-                                                      **ThankYou**
+# 25. Program to find roots of equation 
+```C
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double a, b, c, discriminant, root1, root2, realPart, imaginaryPart;
+    printf("Enter coefficients a, b and c: ");
+    scanf("%lf %lf %lf",&a, &b, &c);
+    discriminant = b*b-4*a*c;
+    // condition for real and different roots
+    if (discriminant > 0)
+    {
+        root1 = (-b+sqrt(discriminant))/(2*a);
+        root2 = (-b-sqrt(discriminant))/(2*a);
+        printf("root1 = %.2lf and root2 = %.2lf",root1 , root2);
+    }
+    //condition for real and equal roots
+    else if (discriminant == 0)
+    {
+        root1 = root2 = -b/(2*a);
+        printf("root1 = root2 = %.2lf;", root1);
+    }
+    // if roots are not real 
+    else
+    {
+        realPart = -b/(2*a);
+        imaginaryPart = sqrt(-discriminant)/(2*a);
+        printf("root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi", realPart, imaginaryPart, realPart, imaginaryPart);
+    }
+    return 0;
+}   
+```
+**Output**
+```
+Enter coefficients a, b and c: 1 4 3
+root1 = -1.00 and root2 = -3.00
+```
+    ***ThankYou***
