@@ -804,62 +804,32 @@ Enter a number to search: 8
   Enter the Number: 8
   8 is not a Prime Number
 ```
-# 22. Program of Multiplication of 2x2 Matrix
+# 22.Program to find factorial of a number 
 ```C
 #include<stdio.h>
+int fact(int n);
 int main()
 {
-float a,b,c,d,e,f,g,h,i,j,k,l;
-
-printf("\nSample of Ist matrix: | a=1      b=2 |\n                      | c=3      d=4 |\n\n\
-Sample of 2nd matrix: | e=5      f=6 |\n                      | f=7      h=8 |\n\n");
-
-     printf("Enter The Valve of a: ");
-     scanf("%f",&a);
-     printf("Enter The Valve of b: ");
-     scanf("%f",&b);
-     printf("Enter The Valve of c: ");
-     scanf("%f",&c);
-     printf("Enter The Valve of d: ");
-     scanf("%f",&d);
-     printf("Enter The Valve of e: ");
-     scanf("%f",&e);
-     printf("Enter The Valve of f: ");
-     scanf("%f",&f);
-     printf("Enter The Valve of g: ");
-     scanf("%f",&g);
-     printf("Enter The Valve of h: ");
-     scanf("%f",&h); 
-
-     i=(a*e)+(b*g);
-     j=(a*f)+(b*h);
-     k=(c*e)+(d*g);
-     l=(c*f)+(d*h);
-
-     printf("\nMultiplication of A,B is: | %.2f     %.2f |\n                          | %.2f     %.2f |",i,j,k,l);
-
-     return 0;
+  int a, b; 
+  printf("Enter The Number: ");
+  scanf("%d\n",&a);
+  b=fact(a);
+  printf("Factorial :%d",b);
+  return 0;
+}
+int fact(int n) 
+{
+ if(n==1)
+  return 1;
+ else
+  return(n*fact(n-1));
 }
 ```
 **Output of the program**
 ```
-Sample of Ist matrix: | a=1      b=2 |
-                      | c=3      d=4 |
+Enter The Number:4
+Factorial :24 
 
-Sample of 2nd matrix: | e=5      f=6 |
-                      | f=7      h=8 |
-
-Enter The Valve of a: 7
-Enter The Valve of b: 5
-Enter The Valve of c: 4
-Enter The Valve of d: 0
-Enter The Valve of e: 3
-Enter The Valve of f: 5
-Enter The Valve of g: 9
-Enter The Valve of h: 1
-
-Multiplication of A,B is: | 66.00     40.00 |
-                          | 12.00     20.00 |
 ```
 # 23. Program to find largest of four numbers using function.
 ```C
@@ -967,4 +937,45 @@ int main()
 Enter coefficients a, b and c: 1 4 3
 root1 = -1.00 and root2 = -3.00
 ```
-   #ThankYou
+# 26. Program to print fibonacci
+```C
+#include <stdio.h>
+int fib(int n);
+int main()
+{
+    int a;
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    for(int i=0;i<a;i++)
+    {
+    printf("%d",fib(i));
+    }
+    return 0;
+}
+int fib(int n)
+{
+  if(n==0)
+   return 0;
+  else if(n==1)
+   return 1;
+  else
+   return(fib(n-1)+fib(n-2));
+}
+
+```
+**Output**
+```
+Enter the number: 10
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+```
+
+###ThankYou
