@@ -1059,4 +1059,101 @@ Enter the two positive numbers :0 5
 Ackerman : 6
 
 ```
+# 30. Program on linear search
+```C
+#include<stdio.h>
+ 
+int main()
+{
+	int a[20],i,x,n;
+	printf("How many elements?");
+	scanf("%d",&n);
+	
+	printf("Enter array elements:\n");
+	for(i=0;i<n;++i)
+		scanf("%d",&a[i]);
+	
+	printf("\nEnter element to search:");
+	scanf("%d",&x);
+	
+	for(i=0;i<n;++i)
+		if(a[i]==x)
+			break;
+	
+	if(i<n)
+		printf("Element found at index %d",i);
+	else
+		printf("Element not found");
+ 
+	return 0;
+}
+ 
+```
+**Output**
+```
+How many elements?4
+Enter array elements:
+6 8 9 1
+
+Enter element to search:9
+Element found at index 2
+```
+# 31. Program on binary search
+```C
+#include <stdio.h>
+int main()
+{
+  int c, first, last, middle, n, search, array[100];
+
+  printf("Enter number of elements\n");
+  scanf("%d", &n);
+
+  printf("Enter %d integers\n", n);
+
+  for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+
+  printf("Enter value to find\n");
+  scanf("%d", &search);
+
+  first = 0;
+  last = n - 1;
+  middle = (first+last)/2;
+
+  while (first <= last) {
+    if (array[middle] < search)
+      first = middle + 1;
+    else if (array[middle] == search) {
+      printf("%d found at location %d.\n", search, middle+1);
+      break;
+    }
+    else
+      last = middle - 1;
+
+    middle = (first + last)/2;
+  }
+  if (first > last)
+    printf("Not found! %d isn't present in the list.\n", search);
+
+  return 0;
+}
+```
+**Output**
+```
+Enter number of elements
+7
+Enter 7 integers
+4
+5
+8
+9
+11
+23
+3
+Enter value to find
+11
+11 found at location 5.
+
+```
+
 **ThankYou**
