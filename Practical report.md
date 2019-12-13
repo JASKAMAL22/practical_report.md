@@ -977,5 +977,86 @@ Enter the number: 10
 21
 34
 ```
+# 27. To check whether number is palindrome or not.
+```C
+#include<stdio.h>
+int main()
+{
+    int n,d,original, r=0;
+    printf("Enter the number: ");
+    scanf("%d", &n);
+    original = n;
+    while(n>0)
+    {
+        d=n%10;
+        r = (r*10) + d;
+        n=n/10;
+    }
+    if (original == r)
+    printf("Number is a palindrome");
+    else 
+    printf("Number is not a palindorme");
+    return 0;
+}
+```
+**Output**
+```
+Enter the number: 12321
+Number is a palindrome
+```
+# 28. To check whether number is palindrome or not.
+```C
+#include<stdio.h>
+int main()
+{
+    int n,d,original, r=0;
+    printf("Enter the number: ");
+    scanf("%d", &n);
+    original = n;
+    while(n>0)
+    {
+        d=n%10;
+        r = r + (d*d*d);
+        n=n/10;
+    }
+    if (original == r)
+    printf("Number is a Armstrong");
+    else 
+    printf("Number is not a Armstrong");
+    return 0;
+}
+```
+**Output**
+```
+Enter the number: 153
+Number is a Armstrong
+```
+# 29. Program illustrates use of Ackerman's function
+```C
+#include<stdio.h>
+int A(int m, int n);
+int main()
+{
+  int a, b;
+  printf("Enter the two positive numbers :");
+  scanf("%d %d\n",&a, &b);
+  printf("Ackerman : %d",A(a,b));
+  return 0;
+}
+int A(int m, int n)
+{
+  if(m==0)
+   return(n+1);
+  else if(n==0)
+   return(A(m-1,1));
+  else
+   return(A(m-1,A(m,n-1)));
+}
+```
+**Output**
+```
+Enter the two positive numbers :0 5
+Ackerman : 6
 
-###ThankYou
+```
+**ThankYou**
